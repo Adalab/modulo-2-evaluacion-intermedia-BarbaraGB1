@@ -3,7 +3,8 @@
 const select = document.querySelector('.js-select');
 const btn = document.querySelector(".js-btn");
 const text = document.querySelector(".js-text");
-
+const player = document.querySelector(".js-jugador");
+const computadora = document.querySelector(".js-computadora");
 let fuerza="";
 
 function getRandomNumber(max) {
@@ -39,17 +40,11 @@ function comparation (fuerza){
      } else if (selectValue === fuerza){
         text.innerHTML= "Empate"
      };  
-     return text
+    
    
 }
 
-function marcador (){
-    if (text = "Ha ganado el ejercito del bien! Enhorabuena."){
 
-    }
-    for( let i = 0; )
-    
-}
   
 
 
@@ -59,7 +54,7 @@ function  handleClick(e){
     e.preventDefault();
     random();
     comparation(fuerza);
-marcador(text)
+
    
   
 };
