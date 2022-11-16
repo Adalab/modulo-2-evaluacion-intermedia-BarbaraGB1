@@ -6,6 +6,8 @@ const text = document.querySelector(".js-text");
 const player = document.querySelector(".js-jugador");
 const computadora = document.querySelector(".js-computadora");
 let fuerza="";
+let user="";
+let pc="";
 
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
@@ -13,8 +15,7 @@ function getRandomNumber(max) {
   
 function random(){
      debugger;
-    
-        const randomNumber = getRandomNumber(5)
+     const randomNumber = getRandomNumber(5)
        if(randomNumber === 1){
         fuerza = 2
        }else  if(randomNumber === 2){
@@ -29,27 +30,22 @@ function random(){
       
     
     }
-    
-
 function comparation (fuerza){
     const selectValue = select.value;
     if(selectValue > fuerza){
         text.innerHTML= "Ha ganado el ejercito del bien! Enhorabuena."
+        user++;
+        player.innerHTML= `Jugador : ${user}`;
      } else if ( selectValue < fuerza){
         text.innerHTML= "Ha ganado el ejercito del mal! Vuelva a intentarlo."
+        pc++;
+        computadora.innerHTML= `Ordenador : ${pc}`;
      } else if (selectValue === fuerza){
         text.innerHTML= "Empate"
      };  
     
    
 }
-
-
-  
-
-
-
-
 function  handleClick(e){
     e.preventDefault();
     random();
@@ -58,7 +54,6 @@ function  handleClick(e){
    
   
 };
-
 btn.addEventListener("click",handleClick)
     
 
